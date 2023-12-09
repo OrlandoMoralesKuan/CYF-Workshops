@@ -4,13 +4,15 @@
 // Fix anything that needs fixing.
 
 const person = {
-    "name": "Manu",
-    "favourite_ice_cream": "vanilla",
-    "favourite_topping": "marshmallows",
+  name: "Manu",
+  favourite_ice_cream: "vanilla",
+  favourite_topping: "marshmallows",
 };
 
 function assertFieldEquals(object, field, targetValue) {
-    console.assert(object.field === targetValue);
+  console.assert(object.field === targetValue);
+  console.log(object.field === targetValue);
 }
 
-assertFieldEquals(person, "favourite_ice_cream", "vanilla");
+assertFieldEquals(person.favourite_ice_cream, "vanilla");
+// you have to write person.favourite_ice_cream instead person, "favourite_ice_cream"
