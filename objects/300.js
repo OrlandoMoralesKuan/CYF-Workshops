@@ -4,21 +4,30 @@
 // Fix anything that needs fixing.
 
 function checkLivesNearCYF(person) {
-    const cyfLocations = ["Birmingham", "Cape Town", "Glasgow", "London", "Manchester"];
-    return cyfLocations.includes(person.location);
+  const cyfLocations = [
+    "Birmingham",
+    "Cape Town",
+    "Glasgow",
+    "London",
+    "Manchester",
+  ];
+  return cyfLocations.includes(person.city);
 }
 
 const mo = {
-    "name": "Mo",
-    "city": "Glasgow",
-    "focus": "React",
+  name: "Mo",
+  city: "Glasgow",
+  focus: "React",
 };
 
 const sayed = {
-    "name": "Sayed",
-    "city": "Edinburgh",
-    "focus": "SQL",
-}
+  name: "Sayed",
+  city: "Edinburgh",
+  focus: "SQL",
+};
 
 console.assert(checkLivesNearCYF(mo));
 console.assert(!checkLivesNearCYF(sayed));
+// The program will show fail because the key location is diferent to key city
+console.log(checkLivesNearCYF(mo));
+console.log(!checkLivesNearCYF(sayed));
